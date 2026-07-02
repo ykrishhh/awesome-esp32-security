@@ -8,9 +8,11 @@
 [![ESP32 Security](https://img.shields.io/badge/Topic-esp32--security-blueviolet)](https://github.com/topics/esp32-security)
 [![IoT Pentesting](https://img.shields.io/badge/Topic-iot--pentesting-orange)](https://github.com/topics/iot-pentesting)
 
-> A hand-picked collection of ESP32 security tools, firmware analysis pipelines, IoT pentesting frameworks, and embedded hardware research resources.
+> Hand-picked ESP32 security tools — firmware analysis, IoT pentesting frameworks, embedded hardware research, and more.
 
-The ESP32 family dominates the IoT landscape — from smart home devices to industrial controllers. This list gathers the most useful open-source projects for auditing, probing, and hardening these chips across WiFi, Bluetooth Low Energy, RF, and firmware layers.
+I got tired of bookmarking random repos and losing track of what actually works on ESP32. So I started keeping a list. This is that list.
+
+The ESP32 shows up everywhere — smart locks, industrial sensors, consumer IoT garbage. If you're doing security work on any of these, you need the right tools. Here's what I've found useful across WiFi, BLE, RF, and firmware layers.
 
 ---
 
@@ -49,7 +51,7 @@ Tools for extracting, parsing, reversing, and auditing ESP32 firmware images.
 
 ## WiFi Security & Monitoring
 
-Packet sniffing, deauth detection, rogue AP frameworks, and network reconnaissance using ESP32 hardware.
+Packet sniffing, deauth detection, rogue AP frameworks, and network recon using ESP32 hardware.
 
 | Project | What it does | Link |
 |---------|-------------|------|
