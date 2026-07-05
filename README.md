@@ -29,6 +29,17 @@ git clone https://github.com/ykrishhh/awesome-esp32-security.git
 cd awesome-esp32-security
 ```
 
+## BLE Security Tools
+
+| Tool | Description | Platform |
+|------|-------------|----------|
+| [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) | BLE scanner and debugger | Android/iOS |
+| [BLE Scanner](https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner) | Scan and explore BLE devices | Android |
+| [GATTacker](https://github.com/AresS31/GATTacker) | BLE man-in-the-middle framework | Linux |
+| [Bettercap](https://www.bettercap.org/) | BLE sniffing and attacks | Cross-platform |
+| [Sweyntooth](https://asset-group.github.io/disclosures/sweyntooth/) | BLE vulnerabilities exploitation | Research |
+| [Braktooth](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) | ESP32 BT Classic attacks | ESP32 |
+
 ## Contributing
 
 Contributions welcome!
