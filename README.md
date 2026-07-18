@@ -40,6 +40,12 @@ cd awesome-esp32-security
 | [Sweyntooth](https://asset-group.github.io/disclosures/sweyntooth/) | BLE vulnerabilities exploitation | Research |
 | [Braktooth](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) | ESP32 BT Classic attacks | ESP32 |
 
+## Troubleshooting
+
+Hit a wall with SPI/I2C, NRF24L01, power, flashing, or serial? See the
+[ESP32 Security Troubleshooting Guide](docs/troubleshooting.md) — real fixes for
+the failures that eat your first day.
+
 ## Contributing
 
 Contributions welcome!
