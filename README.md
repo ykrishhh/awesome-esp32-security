@@ -29,6 +29,48 @@ git clone https://github.com/ykrishhh/awesome-esp32-security.git
 cd awesome-esp32-security
 ```
 
+## ESP32 Hardware Security Architecture
+
+To secure an ESP32 deployment against both remote and physical attack vectors, the hardware architecture relies on a series of cryptographic and isolation mechanisms built into the silicon. Below is a structured threat-model mapping of ESP32's built-in security controls:
+
+```mermaid
+graph TD
+    subgraph Attacks["Threat & Attack Vectors"]
+        A1["Physical Flash Dumping (SPI Sniffing)"]
+        A2["Glitching & Side-Channel (Voltage/Clock)"]
+        A3["Malicious Firmware Flash (Remote/Physical)"]
+        A4["JTAG/OCD Hardware Debug Probe Access"]
+    end
+
+    subgraph HardwareControls["ESP32 Core Cryptographic Controls"]
+        C1["Flash Encryption (AES-256)"]
+        C2["Secure Boot (V1/V2 Cryptographic Signatures)"]
+        C3["Hardware JTAG Disable (eFuse LOCK)"]
+        C4["Silicon eFuses (One-Time Programmable)"]
+    end
+
+    subgraph DefenseState["Secured Target State"]
+        S1["Confidential Firmware & Keys"]
+        S2["Immutable Trust Anchor (ROM Bootloader)"]
+        S3["Locked Debug Port (Anti-Reversing)"]
+        S4["Untamperable Hardware Config"]
+    end
+
+    A1 -->|Blocked by| C1
+    A3 -->|Blocked by| C2
+    A4 -->|Blocked by| C3
+    A2 -->|Mitigated by| C4
+
+    C1 -->|Ensures| S1
+    C2 -->|Ensures| S2
+    C3 -->|Ensures| S3
+    C4 -->|Protects| S4
+    
+    style Attacks fill:#1a0f0f,stroke:#7a1a1a,stroke-width:2px,color:#fff
+    style HardwareControls fill:#0f1a0f,stroke:#1a7a1a,stroke-width:2px,color:#fff
+    style DefenseState fill:#0f141a,stroke:#1a4d7a,stroke-width:2px,color:#fff
+```
+
 ## BLE Security Tools
 
 | Tool | Description | Platform |
